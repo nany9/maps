@@ -1,4 +1,5 @@
 const tg = window.Telegram.WebApp;
+tg.disableVerticalSwipes();
 tg.showAlert(tg.initDataUnsafe?.user?.first_name);
 tg.LocationManager.init();
 
