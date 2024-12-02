@@ -37,7 +37,7 @@ document.getElementsByClassName("leaflet-bottom leaflet-right")[0].remove();
 
 const geo_btn = document.getElementById("geo-div");
 geo_btn.addEventListener("click", function (e){
-    alert("1");
+    tg.showaAlert("succes");
     tg.LocationManager.init();
     tg.LocationManager.getLocation(function loc(err){
         alert(1);
