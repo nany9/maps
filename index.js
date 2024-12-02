@@ -39,11 +39,12 @@ document.getElementsByClassName("leaflet-routing-alternatives-container")[0].rem
 document.getElementsByClassName("leaflet-bottom leaflet-right")[0].remove();
 
 const geo_btn = document.getElementById("geo-div");
+const debug = document.getElementById("debug-text");
 geo_btn.addEventListener("click", function (e){
     tg.showAlert(tg.LocationManager.isInited);
 
-    tg.LocationManager.getLocation(function loc(value, err){
-        tg.showAlert(value.latitude);
+    tg.LocationManager.getLocation(function loc(value){
+        debug.textContent = value.latitude;
     });
 });
 
