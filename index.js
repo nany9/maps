@@ -1,5 +1,5 @@
 const tg = window.Telegram.WebApp;
-alert(tg.initDataUnsafe?.user?.first_name);
+tg.showAlert(tg.initDataUnsafe?.user?.first_name);
 var map = L.map('map').fitWorld();
 
 var counter = 0;
