@@ -1,6 +1,6 @@
 const tg = window.Telegram.WebApp;
 tg.disableVerticalSwipes();
-tg.showAlert(tg.initDataUnsafe?.user?.first_name);
+//tg.showAlert(tg.initDataUnsafe?.user?.first_name);
 tg.LocationManager.init();
 
 
@@ -49,7 +49,7 @@ document.getElementsByClassName("leaflet-bottom leaflet-right")[0].remove();
 const geo_btn = document.getElementById("geo-div");
 const debug = document.getElementById("debug-text");
 geo_btn.addEventListener("click", function (e){
-    tg.showAlert(tg.LocationManager.isInited);
+    //tg.showAlert(tg.LocationManager.isInited);
 
     tg.LocationManager.getLocation(function loc(value){
         
