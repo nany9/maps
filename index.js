@@ -1,6 +1,8 @@
 const tg = window.Telegram.WebApp;
 tg.showAlert(tg.initDataUnsafe?.user?.first_name);
-tg.LocationManager.init();
+tg.LocationManager.init(function msg(e){
+    tg.showAlert('Location init');
+});
 var map = L.map('map').fitWorld();
 
 var counter = 0;
