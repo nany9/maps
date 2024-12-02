@@ -16,23 +16,23 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 var icon = L.icon({
-    iconUrl: "https://static.thenounproject.com/png/462952-200.png",
+    iconUrl: "https://cdn-icons-png.flaticon.com/512/2527/2527411.png",
     iconSize: [50, 50]
 });
 
-var marker = L.marker([63.602492, 53.880256], { icon: icon }).addTo(map);
 
 
-L.Routing.control({
-    waypoints: [
-      L.latLng(63.602927, 53.873839),
-      L.latLng(63.592490, 53.908742)
-    ],
-    lineOptions: {
-        styles: [{color: 'blue'}]
-    },
-    addWaypoints: false
-  }).addTo(map);
+
+// L.Routing.control({
+//     waypoints: [
+//       L.latLng(63.602927, 53.873839),
+//       L.latLng(63.592490, 53.908742)
+//     ],
+//     lineOptions: {
+//         styles: [{color: 'blue'}]
+//     },
+//     addWaypoints: false
+//   }).addTo(map);
 
 document.getElementsByClassName("leaflet-routing-alternatives-container")[0].remove();
 
@@ -44,7 +44,9 @@ geo_btn.addEventListener("click", function (e){
     tg.showAlert(tg.LocationManager.isInited);
 
     tg.LocationManager.getLocation(function loc(value){
+        
         debug.textContent = value.latitude + ',' + value.longitude;
+        var marker = L.marker([value.latitude, value.longitude], { icon: icon }).addTo(map);
     });
 });
 
