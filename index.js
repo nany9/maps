@@ -41,7 +41,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 //     addWaypoints: false
 //   }).addTo(map);
 
-document.getElementsByClassName("leaflet-routing-alternatives-container")[0].remove();
+// document.getElementsByClassName("leaflet-routing-alternatives-container")[0].remove();
 
 document.getElementsByClassName("leaflet-bottom leaflet-right")[0].remove();
 
