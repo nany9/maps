@@ -9,10 +9,10 @@ var map = L.map('map').setView([63.5917327057322, 53.90797957093808], 13);
 function addMarker(value){
     var icon = L.icon({
         iconUrl: "https://cdn-icons-png.flaticon.com/512/2527/2527411.png",
-        iconSize: [50, 50]
+        iconSize: [24, 24]
     });
     var marker = L.marker([value.latitude, value.longitude], { icon: icon }).addTo(map);
-    map.setView([value.latitude, value.longitude], 13);
+    map.setView([value.latitude, value.longitude], 16);
 }
 
 
