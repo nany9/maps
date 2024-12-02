@@ -15,10 +15,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     
 }).addTo(map);
 
-var icon = L.icon({
-    iconUrl: "https://cdn-icons-png.flaticon.com/512/2527/2527411.png",
-    iconSize: [50, 50]
-});
+
 
 
 
@@ -46,6 +43,10 @@ geo_btn.addEventListener("click", function (e){
     tg.LocationManager.getLocation(function loc(value){
         
         debug.textContent = value.latitude + ',' + value.longitude;
+        var icon = L.icon({
+            iconUrl: "https://cdn-icons-png.flaticon.com/512/2527/2527411.png",
+            iconSize: [50, 50]
+        });
         var marker = L.marker([value.latitude, value.longitude], { icon: icon }).addTo(map);
     });
 });
