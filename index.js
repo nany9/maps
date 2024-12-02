@@ -1,5 +1,6 @@
 const tg = window.Telegram.WebApp;
 tg.showAlert(tg.initDataUnsafe?.user?.first_name);
+tg.LocationManager.init();
 var map = L.map('map').fitWorld();
 
 var counter = 0;
@@ -38,7 +39,7 @@ document.getElementsByClassName("leaflet-bottom leaflet-right")[0].remove();
 const geo_btn = document.getElementById("geo-div");
 geo_btn.addEventListener("click", function (e){
     tg.showAlert("succes");
-    tg.LocationManager.init();
+
     tg.LocationManager.getLocation(function loc(value, err){
         tg.showAlert(value.latitude);
     });
