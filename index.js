@@ -39,8 +39,8 @@ const geo_btn = document.getElementById("geo-div");
 geo_btn.addEventListener("click", function (e){
     tg.showAlert("succes");
     tg.LocationManager.init();
-    tg.LocationManager.getLocation(function loc(err){
-        alert(1);
+    tg.LocationManager.getLocation(function loc(value, err){
+        tg.showAlert(value.latitude);
     });
 });
 
