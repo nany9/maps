@@ -3,7 +3,7 @@ tg.showAlert(tg.initDataUnsafe?.user?.first_name);
 tg.LocationManager.init();
 
 
-var map = L.map('map').fitWorld();
+var map = L.map('map').setView([63.5917327057322, 53.90797957093808]);
 
 var counter = 0;
 
