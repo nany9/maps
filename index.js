@@ -44,7 +44,7 @@ geo_btn.addEventListener("click", function (e){
     tg.showAlert(tg.LocationManager.isInited);
 
     tg.LocationManager.getLocation(function loc(value){
-        debug.textContent = value.latitude;
+        debug.textContent = value.latitude + ',' + value.longitude;
     });
 });
 
