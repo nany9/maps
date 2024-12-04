@@ -21,7 +21,8 @@ function addMarker(value){
 
 function changeAddressText(text){
     const data = JSON.parse(text)["address"]
-    d_add.textContent = `${data["road"]} ${data["house_number"]} (${data["town"]})`
+    const street = data["road"].replace('улица', '');
+    d_add.textContent = `${street} ${data["house_number"]} (${data["town"]})`
 }
 
 function getAddress(v){
