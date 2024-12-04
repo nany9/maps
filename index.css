@@ -110,6 +110,8 @@ html, body, #map {
 #address-div {
     height: 100px;
     margin-top: 25px;
+    display: flex;
+    flex-direction: column;
 
 }
 

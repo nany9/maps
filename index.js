@@ -19,6 +19,19 @@ function addMarker(value){
     map.setView([value.latitude, value.longitude], 16);
 }
 
+function changeAddressText(text){
+    const data = JSON.parse(text)["address"]
+    d_add.textContent = `${data["road"]} ${data["house_number"]} (${data["town"]})`
+}
+
+function getAddress(v){
+    url = `https://nominatim.openstreetmap.org/reverse.php?lat=${v.latitude}&lon=${v.longitude}&zoom=18&format=jsonv2`;
+
+fetch(url)
+.then(response => response.text())
+.then(text => changeAddressText(text))
+
+}
 
 
 
@@ -56,6 +69,7 @@ document.getElementsByClassName("leaflet-bottom leaflet-right")[0].remove();
 
 const geo_btn = document.getElementById("geo-div");
 const debug = document.getElementById("debug-text");
+const d_add = document.getElementById("debug-address");
 geo_btn.addEventListener("click", function (e){
     //tg.showAlert(tg.LocationManager.isInited);
     map.eachLayer((layer) => {
@@ -65,7 +79,7 @@ geo_btn.addEventListener("click", function (e){
       });
 
     tg.LocationManager.getLocation(function loc(value){
-        
+        getAddress(value);
         debug.textContent = value.latitude + ',' + value.longitude;
         addMarker(value);
         
