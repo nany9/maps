@@ -6,12 +6,6 @@ body {
     font-family: 'SF Pro Display', sans-serif;
 } 
 
-
-html, body, #map { 
-    /* height: 100%; 
-    width: 100vw;  */
-}
-
 #main {
     position: relative;
 }
@@ -47,7 +41,6 @@ html, body, #map {
     left: 0; 
     right: 0; 
     margin-inline: auto; 
-    
 }
 
 .leaflet-control-zoom.leaflet-bar.leaflet-control{
@@ -63,39 +56,29 @@ html, body, #map {
     border: none;
     display: flex;
     flex-direction: column;
-    gap: 4px;
-    
+    gap: 4px; 
 }
 
 
 
 .leaflet-control-zoom.leaflet-bar.leaflet-control a {
-    
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     padding: 5px;
     border-radius: 100px;
     transition: 300ms ease;
-    
 }
 
 .leaflet-control-zoom.leaflet-bar.leaflet-control a:active {
     background-color: #8f8f8f;
-  
     transition: 300ms ease;
 }
 
-
-
-
-
-
-
-
-
-
+.leaflet-control-zoom.leaflet-bar.leaflet-control span {
+    width: fit-content;
+    height: fit-content;
+}
 
 .leaflet-top.leaflet-left {
-    
     /* margin-top: calc(50vh - 84.8px - 117.5px); */
     margin-top: calc(50vh - 42.4px - 117.5px);
 
@@ -112,13 +95,10 @@ html, body, #map {
     margin-top: 25px;
     display: flex;
     flex-direction: column;
-
 }
 
 #order-menu {
     height: 60px;
-
-
 
 }
 
@@ -131,9 +111,7 @@ html, body, #map {
     
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-
-   
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);   
 }
 
 #order-button-left {
@@ -149,21 +127,17 @@ html, body, #map {
     /* border-bottom-left-radius: 20px; */
     transition: 300ms ease;
     /* box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); */
-
 }
 
 #order-button-left:active {
     background-color: rgb(147, 147, 0); 
-    
     transition: 300ms ease;
-
 }
 
 #order-button-left-text {
     height: 100%;
     font-size: 24px;
     user-select: none;
-    
 }
 
 
@@ -176,9 +150,6 @@ html, body, #map {
     /* border-top-right-radius: 20px; */
     /* border-bottom-right-radius: 20px; */
     /* box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); */
-
-    
-
 }
 
 #geo-div {
@@ -186,7 +157,7 @@ html, body, #map {
     height: 32px; */
     height: 42px;
     position: absolute;
-    z-index: ;
+    z-index: 3;
     /* bottom: 245px; */
     right: 10px;
     background-color: white;
@@ -201,7 +172,6 @@ html, body, #map {
 #geo-div:active {
     background-color: #8f8f8f;
     transition: 300ms ease;
-
 }
 #geo-wrap {
     height: 42px;
@@ -220,6 +190,7 @@ html, body, #map {
     width: 45px;
     height: 60px;
     background: linear-gradient(90deg, rgba(235,235,235,1) 0%, rgba(255,255,255,1) 100%);
+    transition: all 300ms ease;
 }
 
 #right-shadow {
@@ -227,13 +198,95 @@ html, body, #map {
     height: 60px;
     margin-right: 0;
     background: linear-gradient(270deg, rgba(235,235,235,1) 0%, rgba(255,255,255,1) 100%);
-
+    /* background: linear-gradient(270deg, rgb(193, 193, 193) 0%, rgba(255,255,255,1) 100%); */
 }
+
+#right-shadow:active {
+    background: linear-gradient(270deg, rgb(193, 193, 193) 0%, rgba(255,255,255,1) 100%);
+}
+
+#left-shadow:active {
+    background: linear-gradient(90deg, rgb(193, 193, 193) 0%, rgba(255,255,255,1) 100%);
+}
+
 
 #order-button-price {
     width: 60px;
     height: 60px;
 }
+
+#user-wrap {
+    height: 42px;
+    position: absolute;
+    z-index: 3;
+    left: 0; 
+    right: 0; 
+    margin-inline: auto; 
+    /* bottom: 245px; */
+    top: 10px;
+    max-width: 1000px;
+    width: 100vw;
+    height: 42px;
+}
+
+#user-div {
+    position: absolute;
+    right: 10px;
+    background-color: white;
+    width: 42px;
+    height: 42px;
+    border-radius: 100px;
+    transition: 300ms ease;
+}
+
+#user-div:active {
+    background-color: #8f8f8f;
+    transition: 300ms ease;
+}
+
+#user-img {
+    user-select: none;
+    width: fit-content;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#user-img img {
+    user-select: none;
+}
+
+.price-btn {
+    width: fit-content;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.price-btn span {
+    user-select: none;
+    font-size: 24px;
+}
+
+#price-text-div {
+    width: fit-content;
+    height: fit-content;
+    font-size: 24px;
+    font-weight: 100;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+
 
 
 
