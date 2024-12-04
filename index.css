@@ -126,6 +126,12 @@ html, body, #map {
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
+    
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+   
 }
 
 #order-button-left {
@@ -137,22 +143,25 @@ html, body, #map {
     height: 60px;
     width: 150px;
     background-color: #E5FF00;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+    /* border-top-left-radius: 20px; */
+    /* border-bottom-left-radius: 20px; */
     transition: 300ms ease;
+    /* box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); */
 
 }
 
 #order-button-left:active {
     background-color: rgb(147, 147, 0); 
+    
     transition: 300ms ease;
 
 }
 
 #order-button-left-text {
-    vertical-align: baseline;
     height: 100%;
     font-size: 24px;
+    user-select: none;
+    
 }
 
 
@@ -160,9 +169,13 @@ html, body, #map {
     height: 60px;
     width: 150px;
     background-color: white;
+    display: flex;
+    flex-direction: row;
+    /* border-top-right-radius: 20px; */
+    /* border-bottom-right-radius: 20px; */
+    /* box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); */
 
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    
 
 }
 
@@ -171,8 +184,8 @@ html, body, #map {
     height: 32px; */
     height: 42px;
     position: absolute;
-    z-index: 3;
-    bottom: 245px;
+    z-index: ;
+    /* bottom: 245px; */
     right: 10px;
     background-color: white;
     border-radius: 100px;
@@ -187,6 +200,37 @@ html, body, #map {
     background-color: #8f8f8f;
     transition: 300ms ease;
 
+}
+#geo-wrap {
+    height: 42px;
+    position: absolute;
+    z-index: 3;
+    left: 0; 
+    right: 0; 
+    margin-inline: auto; 
+    bottom: 245px;
+    max-width: 1000px;
+    width: 100vw;
+    height: 42px;
+}
+
+#left-shadow {
+    width: 45px;
+    height: 60px;
+    background: linear-gradient(90deg, rgba(235,235,235,1) 0%, rgba(255,255,255,1) 100%);
+}
+
+#right-shadow {
+    width: 45px;
+    height: 60px;
+    margin-right: 0;
+    background: linear-gradient(270deg, rgba(235,235,235,1) 0%, rgba(255,255,255,1) 100%);
+
+}
+
+#order-button-price {
+    width: 60px;
+    height: 60px;
 }
 
 
