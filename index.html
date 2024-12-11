@@ -9,7 +9,7 @@
     crossorigin=""/>
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.3.0/dist/MarkerCluster.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.3.0/dist/MarkerCluster.Default.css" />
-    <link rel="stylesheet" href="index.css?v=4">
+    <link rel="stylesheet" href="index.css?v=26">
     <link
     href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
     rel="stylesheet"
@@ -22,9 +22,24 @@
         </div>
 
         <div id="order-div">
+            
             <div id="address-div">
-                <span id="debug-text">nothing</span>
-                <span id="debug-address">null</span>
+                <div id="hr-div">
+                    <div id="hr"></div>
+                </div>
+                <div id="from-div">
+                    <img src="loc.svg"/>
+                    <input id="from-input" class="address-inputs" placeholder="Откуда"/>
+                </div>
+                
+    
+
+                <div id="to-div" >
+                    <img src="where.svg"/>
+                    <input id="to-input" class="address-inputs" placeholder="Куда"/>
+                </div>
+                <!-- <span id="debug-text">nothing</span> -->
+                <!-- <span id="debug-address">null</span> -->
             </div>
 
             <div id="order-menu">
@@ -83,6 +98,6 @@
      crossorigin=""></script>
      <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
      <script src="https://unpkg.com/leaflet.markercluster@1.3.0/dist/leaflet.markercluster.js"></script>
-    <script src="index.js?v=25"></script>
+    <script src="index.js?v=26"></script>
 </body>
 </html>

@@ -22,7 +22,7 @@ function addMarker(value){
 function changeAddressText(text){
     const data = JSON.parse(text)["address"]
     const street = data["road"].replace('улица', '');
-    d_add.textContent = `${street} ${data["house_number"]} (${data["town"]})`
+    d_add.value = `${street} ${data["house_number"]} (${data["town"]})`
 }
 
 function getAddress(v){
@@ -66,11 +66,11 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 // document.getElementsByClassName("leaflet-routing-alternatives-container")[0].remove();
 
-document.getElementsByClassName("leaflet-bottom leaflet-right")[0].remove();
+// document.getElementsByClassName("leaflet-bottom leaflet-right")[0].remove();
 
 const geo_btn = document.getElementById("geo-div");
-const debug = document.getElementById("debug-text");
-const d_add = document.getElementById("debug-address");
+const debug = document.getElementById("to-input");
+const d_add = document.getElementById("from-input");
 geo_btn.addEventListener("click", function (e){
     //tg.showAlert(tg.LocationManager.isInited);
     map.eachLayer((layer) => {
@@ -81,7 +81,7 @@ geo_btn.addEventListener("click", function (e){
 
     tg.LocationManager.getLocation(function loc(value){
         getAddress(value);
-        debug.textContent = value.latitude + ',' + value.longitude;
+        debug.value = value.latitude + ',' + value.longitude;
         addMarker(value);
         
     });
